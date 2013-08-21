@@ -17,7 +17,7 @@
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	<feature name="http://api.phonegap.com/1.0/notification"/>
 	<feature name="debug-server" required="true">
-   		<param name="domain" value="http://http://debug.build.phonegap.com"/>
+   		<param name="domain" value="http://debug.build.phonegap.com"/>
    		<param name="key" value="379f85fa-0a14-11e3-907d-12313d16b935"/>
 	</feature>
     <preference name="orientation" value="default" />
