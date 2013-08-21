@@ -118,6 +118,9 @@ myApp.factory('navSvc', function($navigate) {
         },
         back: function () {
             $navigate.back();
+        },
+        deleteHistory: function(){
+        	$navigate.eraseHistory();
         }
     }
 });

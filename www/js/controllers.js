@@ -6,6 +6,10 @@ function HomeCtrl($scope,navSvc,$rootScope) {
     $scope.slidePage = function (path,type) {
         navSvc.slidePage(path,type);
     };
+    $scope.slideHome = function (path,type) {
+    	navSvc.deleteHistory();
+        navSvc.slidePage(path,type);
+    };
     $scope.back = function () {
         navSvc.back();
     };
