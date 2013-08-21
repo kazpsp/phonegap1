@@ -19,7 +19,7 @@ function HomeCtrl($scope,navSvc,$rootScope) {
 
 function NotificationCtrl($scope) {
     $scope.alertNotify = function() {
-        navigator.notification.alert("Sample Alert",function() {console.log("Alert success")},"My Alert","Close");
+        navigator.notification.alert("Sample Alert",null,"My Alert","Close");
     };
     
     $scope.beepNotify = function() {
@@ -37,9 +37,10 @@ function NotificationCtrl($scope) {
 
 function GeolocationCtrl($scope,navSvc,$rootScope) {
     navigator.geolocation.getCurrentPosition(function(position) {
+    	navigator.notification.alert(position.coords.latitude,null,"My Alert","Close");
         $scope.position=position;
         $scope.$apply();
-        },function(e) { console.log("Error retrieving position " + e.code + " " + e.message) });
+        },function(e) {navigator.notification.alert('fuck you',null,"My Alert","Close"); });
 
     $scope.back = function () {
         navSvc.back();
